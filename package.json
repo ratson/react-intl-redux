@@ -1,0 +1,53 @@
+{
+  "name": "react-intl-redux",
+  "version": "0.0.1",
+  "description": "Redux binding for React Intl",
+  "main": "lib/index",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "clean": "rimraf lib dist coverage",
+    "prepublish": "npm-run-all clean build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react-intl": "^2.0.0-beta-2",
+    "react-redux": "^4.2.1",
+    "redux": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-plugin-check-es2015-constants": "^6.3.13",
+    "babel-plugin-syntax-jsx": "^6.3.13",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.4.0",
+    "babel-plugin-transform-es2015-block-scoped-functions": "^6.3.13",
+    "babel-plugin-transform-es2015-destructuring": "^6.4.0",
+    "babel-plugin-transform-es2015-parameters": "^6.4.5",
+    "babel-plugin-transform-es2015-shorthand-properties": "^6.3.13",
+    "babel-plugin-transform-es2015-spread": "^6.4.0",
+    "babel-plugin-transform-object-rest-spread": "^6.3.13",
+    "babel-plugin-transform-react-jsx": "^6.4.0",
+    "npm-run-all": "^1.5.1",
+    "react": "^0.14.7",
+    "react-intl": "^2.0.0-beta-2",
+    "react-redux": "^4.2.1",
+    "redux": "^3.2.1",
+    "rimraf": "^2.5.1"
+  },
+  "repository": "ratson/react-intl-redux",
+  "license": "MIT",
+  "files": [
+    "*.md",
+    "LICENSE",
+    "lib",
+    "src"
+  ],
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-intl",
+    "react-redux",
+    "intl",
+    "i18n",
+    "redux"
+  ]
+}
