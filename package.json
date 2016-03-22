@@ -1,6 +1,6 @@
 {
   "name": "react-intl-redux",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Redux binding for React Intl",
   "main": "lib/index",
   "scripts": {
@@ -10,28 +10,29 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "react-intl": "^2.0.0-beta-2",
-    "react-redux": "^4.2.1",
-    "redux": "^3.2.1"
+    "react-intl": "^2.0.0-rc-1",
+    "react-redux": "^4.4.1",
+    "redux": "^3.3.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.4.5",
-    "babel-plugin-check-es2015-constants": "^6.3.13",
-    "babel-plugin-syntax-jsx": "^6.3.13",
-    "babel-plugin-transform-es2015-arrow-functions": "^6.4.0",
-    "babel-plugin-transform-es2015-block-scoped-functions": "^6.3.13",
-    "babel-plugin-transform-es2015-destructuring": "^6.4.0",
-    "babel-plugin-transform-es2015-parameters": "^6.4.5",
-    "babel-plugin-transform-es2015-shorthand-properties": "^6.3.13",
-    "babel-plugin-transform-es2015-spread": "^6.4.0",
-    "babel-plugin-transform-object-rest-spread": "^6.3.13",
-    "babel-plugin-transform-react-jsx": "^6.4.0",
-    "npm-run-all": "^1.5.1",
+    "babel-cli": "^6.6.5",
+    "babel-plugin-check-es2015-constants": "^6.7.2",
+    "babel-plugin-syntax-jsx": "^6.5.0",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.5.2",
+    "babel-plugin-transform-es2015-block-scoped-functions": "^6.6.5",
+    "babel-plugin-transform-es2015-block-scoping": "^6.7.1",
+    "babel-plugin-transform-es2015-destructuring": "^6.6.5",
+    "babel-plugin-transform-es2015-function-name": "^6.5.0",
+    "babel-plugin-transform-es2015-literals": "^6.5.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.7.0",
+    "babel-plugin-transform-es2015-parameters": "^6.7.0",
+    "babel-plugin-transform-es2015-shorthand-properties": "^6.5.0",
+    "babel-plugin-transform-es2015-spread": "^6.6.5",
+    "babel-plugin-transform-object-rest-spread": "^6.6.5",
+    "babel-plugin-transform-react-jsx": "^6.6.5",
+    "npm-run-all": "^1.6.0",
     "react": "^0.14.7",
-    "react-intl": "^2.0.0-beta-2",
-    "react-redux": "^4.2.1",
-    "redux": "^3.2.1",
-    "rimraf": "^2.5.1"
+    "rimraf": "^2.5.2"
   },
   "repository": "ratson/react-intl-redux",
   "license": "MIT",
