@@ -1,6 +1,6 @@
 {
   "name": "react-intl-redux",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Redux binding for React Intl",
   "main": "lib/index",
   "scripts": {
@@ -24,14 +24,14 @@
     "babel-plugin-transform-es2015-destructuring": "^6.6.5",
     "babel-plugin-transform-es2015-function-name": "^6.5.0",
     "babel-plugin-transform-es2015-literals": "^6.5.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.7.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.7.4",
     "babel-plugin-transform-es2015-parameters": "^6.7.0",
     "babel-plugin-transform-es2015-shorthand-properties": "^6.5.0",
     "babel-plugin-transform-es2015-spread": "^6.6.5",
     "babel-plugin-transform-object-rest-spread": "^6.6.5",
-    "babel-plugin-transform-react-jsx": "^6.6.5",
-    "npm-run-all": "^1.6.0",
-    "react": "^0.14.7",
+    "babel-plugin-transform-react-jsx": "^6.7.4",
+    "npm-run-all": "^1.7.0",
+    "react": "^0.14.8",
     "rimraf": "^2.5.2"
   },
   "repository": "ratson/react-intl-redux",
