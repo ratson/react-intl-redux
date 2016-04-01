@@ -4,7 +4,7 @@ React Intl Redux
 ## Installation
 
 ```
-npm install --save react-intl-redux
+npm install --save react react-intl react-redux react-intl-redux
 ```
 
 ## Usage
@@ -38,4 +38,31 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('container')
 )
+```
+
+### Provide `locale` and `messages` on load
+
+You should provide a different `locale` and `messages` if your user is using `en` locale.
+
+```js
+const messages = {
+  'app.greeting': 'Ciao!',
+}
+
+<Provider store={store} locale="it" messages={messages}>
+  <App />
+</Provider>
+```
+
+### Switch `locale` and `messages` on request
+
+You could also switch `locale` on user's request by dispatching `update` action.
+
+```js
+import {update} from 'react-intl-redux'
+
+dispatch(update({
+  locale,
+  messages,
+}))
 ```
