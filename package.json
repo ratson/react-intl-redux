@@ -10,7 +10,7 @@
     "test": "mocha --compilers js:babel-register --recursive ./test/*.spec.js"
   },
   "dependencies": {
-    "react-intl": "^2.0.0-rc-1",
+    "react-intl": "^2.0.0",
     "react-redux": "^4.4.1",
     "redux": "^3.3.1"
   },
