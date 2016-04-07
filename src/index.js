@@ -1,4 +1,4 @@
-export {default as Provider} from './components/Provider'
+export Provider from './components/Provider'
 
 export const UPDATE = '@@intl/UPDATE'
 

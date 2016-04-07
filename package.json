@@ -7,7 +7,7 @@
     "build": "babel src --out-dir lib",
     "clean": "rimraf lib dist coverage",
     "prepublish": "npm-run-all clean build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --compilers js:babel-register --recursive ./test/*.spec.js"
   },
   "dependencies": {
     "react-intl": "^2.0.0-rc-1",
@@ -28,11 +28,15 @@
     "babel-plugin-transform-es2015-parameters": "^6.7.0",
     "babel-plugin-transform-es2015-shorthand-properties": "^6.5.0",
     "babel-plugin-transform-es2015-spread": "^6.6.5",
+    "babel-plugin-transform-export-extensions": "^6.5.0",
     "babel-plugin-transform-object-rest-spread": "^6.6.5",
     "babel-plugin-transform-react-jsx": "^6.7.4",
+    "babel-register": "^6.7.2",
+    "mocha": "^2.4.5",
     "npm-run-all": "^1.7.0",
     "react": "^0.14.8",
-    "rimraf": "^2.5.2"
+    "rimraf": "^2.5.2",
+    "should": "^8.3.0"
   },
   "repository": "ratson/react-intl-redux",
   "license": "MIT",

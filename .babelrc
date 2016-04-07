@@ -12,6 +12,7 @@
     "transform-es2015-parameters",
     "transform-es2015-shorthand-properties",
     "transform-es2015-spread",
+    "transform-export-extensions",
     "transform-object-rest-spread",
     "transform-react-jsx"
   ]
