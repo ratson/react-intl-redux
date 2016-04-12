@@ -1,6 +1,6 @@
 {
   "name": "react-intl-redux",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Redux binding for React Intl",
   "main": "lib/index",
   "scripts": {
@@ -10,12 +10,12 @@
     "test": "mocha --compilers js:babel-register --recursive ./test/*.spec.js"
   },
   "dependencies": {
-    "react-intl": "^2.0.0",
-    "react-redux": "^4.4.1",
-    "redux": "^3.3.1"
+    "react-intl": "^2.0.1",
+    "react-redux": "^4.4.2",
+    "redux": "^3.4.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.6.5",
+    "babel-cli": "^6.7.5",
     "babel-plugin-check-es2015-constants": "^6.7.2",
     "babel-plugin-syntax-jsx": "^6.5.0",
     "babel-plugin-transform-es2015-arrow-functions": "^6.5.2",
@@ -30,11 +30,11 @@
     "babel-plugin-transform-es2015-spread": "^6.6.5",
     "babel-plugin-transform-export-extensions": "^6.5.0",
     "babel-plugin-transform-object-rest-spread": "^6.6.5",
-    "babel-plugin-transform-react-jsx": "^6.7.4",
+    "babel-plugin-transform-react-jsx": "^6.7.5",
     "babel-register": "^6.7.2",
     "mocha": "^2.4.5",
     "npm-run-all": "^1.7.0",
-    "react": "^0.14.8",
+    "react": "^15.0.1",
     "rimraf": "^2.5.2",
     "should": "^8.3.0"
   },
