@@ -1,0 +1,12 @@
+env:
+  es6: true
+  node: true
+  mocha: true
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+parser: babel-eslint
+plugins:
+  - react
+rules:
+  comma-dangle: [2, "always-multiline"]

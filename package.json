@@ -6,16 +6,18 @@
   "scripts": {
     "build": "babel src --out-dir lib",
     "clean": "rimraf lib dist coverage",
+    "lint": "eslint .",
     "prepublish": "npm-run-all clean build",
     "test": "mocha --compilers js:babel-register --recursive ./test/*.spec.js"
   },
   "dependencies": {
     "react-intl": "^2.0.1",
-    "react-redux": "^4.4.2",
+    "react-redux": "^4.4.5",
     "redux": "^3.4.0"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
+    "babel-eslint": "^6.0.2",
     "babel-plugin-check-es2015-constants": "^6.7.2",
     "babel-plugin-syntax-jsx": "^6.5.0",
     "babel-plugin-transform-es2015-arrow-functions": "^6.5.2",
@@ -32,11 +34,13 @@
     "babel-plugin-transform-object-rest-spread": "^6.6.5",
     "babel-plugin-transform-react-jsx": "^6.7.5",
     "babel-register": "^6.7.2",
+    "eslint": "^2.8.0",
+    "eslint-plugin-react": "^5.0.1",
     "mocha": "^2.4.5",
     "npm-run-all": "^1.7.0",
     "react": "^15.0.1",
     "rimraf": "^2.5.2",
-    "should": "^8.3.0"
+    "should": "^8.3.1"
   },
   "repository": "ratson/react-intl-redux",
   "license": "MIT",

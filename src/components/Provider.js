@@ -1,6 +1,6 @@
 import {connect, Provider as ReduxProvider} from 'react-redux'
 import {IntlProvider} from 'react-intl'
-import React, {Children, PropTypes} from 'react'
+import React, {PropTypes} from 'react'
 
 const Provider = ({store, ...props}) => {
   return (
@@ -12,6 +12,7 @@ const Provider = ({store, ...props}) => {
 
 Provider.propTypes = {
   children: PropTypes.element.isRequired,
+  store: PropTypes.object.isRequired,
 }
 
 const mapStateToProps = (state) => {
