@@ -42,7 +42,7 @@ ReactDOM.render(
 
 ### Provide `locale` and `messages` on load
 
-You should provide a different `locale` and `messages` if your user is using `en` locale.
+You should provide a different `locale` and `messages` if your user is not using `en` locale.
 
 ```js
 const messages = {
