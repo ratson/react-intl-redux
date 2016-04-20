@@ -1,6 +1,6 @@
 {
   "name": "react-intl-redux",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Redux binding for React Intl",
   "main": "lib/index",
   "scripts": {
@@ -13,11 +13,11 @@
   "dependencies": {
     "react-intl": "^2.0.1",
     "react-redux": "^4.4.5",
-    "redux": "^3.4.0"
+    "redux": "^3.5.0"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
-    "babel-eslint": "^6.0.2",
+    "babel-eslint": "^6.0.3",
     "babel-plugin-check-es2015-constants": "^6.7.2",
     "babel-plugin-syntax-jsx": "^6.5.0",
     "babel-plugin-transform-es2015-arrow-functions": "^6.5.2",
