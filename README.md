@@ -4,7 +4,7 @@ React Intl Redux
 ## Installation
 
 ```
-npm install --save react react-intl react-redux react-intl-redux
+npm install react-intl-redux react react-intl react-redux --save
 ```
 
 ## Usage
@@ -45,11 +45,18 @@ ReactDOM.render(
 You should provide a different `locale` and `messages` if your user is not using `en` locale.
 
 ```js
-const messages = {
-  'app.greeting': 'Ciao!',
+const initialState = {
+  intl: {
+    locale: 'it',
+    messages: {
+      'app.greeting': 'Ciao!',
+    },
+  },
+  // ...other initialState
 }
+const store = createStore(reducer, initialState)
 
-<Provider store={store} locale="it" messages={messages}>
+<Provider store={store}>
   <App />
 </Provider>
 ```

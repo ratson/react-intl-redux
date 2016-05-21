@@ -13,7 +13,8 @@
   "dependencies": {
     "react-intl": "^2.1.0",
     "react-redux": "^4.4.5",
-    "redux": "^3.5.1"
+    "redux": "^3.5.1",
+    "warning": "^2.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
