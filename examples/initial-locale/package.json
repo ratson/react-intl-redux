@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "rup"
+  },
+  "dependencies": {
+    "react-intl": "^2.1.2",
+    "react-intl-redux": "../..",
+    "react-redux": "^4.4.5"
+  },
+  "devDependencies": {
+    "rup": "*"
+  }
+}
