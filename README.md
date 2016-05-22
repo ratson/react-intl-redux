@@ -1,6 +1,8 @@
 React Intl Redux
 =========================
 
+[Redux](https://github.com/reactjs/redux) binding for [React Intl](https://github.com/yahoo/react-intl).
+
 ## Installation
 
 ```
@@ -27,7 +29,7 @@ const store = createStore(reducer)
 const App = () => {
   return (
     <p>
-      <FormattedNumber value={10} />
+      <FormattedNumber value={1000} />
     </p>
   )
 }
@@ -60,6 +62,8 @@ const store = createStore(reducer, initialState)
   <App />
 </Provider>
 ```
+
+Refer to the [`initial-locale` example](https://github.com/ratson/react-intl-redux/tree/master/examples/initial-locale) for more details.
 
 ### Switch `locale` and `messages` on request
 
