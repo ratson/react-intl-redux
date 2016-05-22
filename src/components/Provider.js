@@ -3,11 +3,20 @@ import {IntlProvider} from 'react-intl'
 import React, {PropTypes} from 'react'
 import warning from 'warning'
 
+const mapStateToProps = (state) => {
+  const {intl} = state
+  return {
+    ...intl,
+  }
+}
+
+const ConnectedIntlProvider = connect(mapStateToProps)(IntlProvider)
+
 const Provider = ({store, ...props}) => {
   warning(props.locale || props.messages, '[react-intl-redux] pass `locale` and `messages` is deprecated, please set them in `initalState` instead. https://github.com/ratson/react-intl-redux/issues/4')  // eslint-disable-line
   return (
     <ReduxProvider store={store}>
-      <IntlProvider {...props} />
+      <ConnectedIntlProvider {...props} />
     </ReduxProvider>
   )
 }
@@ -17,11 +26,4 @@ Provider.propTypes = {
   store: PropTypes.object.isRequired,
 }
 
-const mapStateToProps = (state) => {
-  const {intl} = state
-  return {
-    ...intl,
-  }
-}
-
-export default connect(mapStateToProps)(Provider)
+export default Provider
