@@ -13,7 +13,7 @@ const mapStateToProps = (state) => {
 const ConnectedIntlProvider = connect(mapStateToProps)(IntlProvider)
 
 const Provider = ({store, ...props}) => {
-  warning(props.locale || props.messages, '[react-intl-redux] pass `locale` and `messages` is deprecated, please set them in `initalState` instead. https://github.com/ratson/react-intl-redux/issues/4')  // eslint-disable-line
+  warning(!(props.locale || props.messages), '[react-intl-redux] pass `locale` and `messages` is deprecated, please set them in `initalState` instead. https://github.com/ratson/react-intl-redux/issues/4')  // eslint-disable-line
   return (
     <ReduxProvider store={store}>
       <ConnectedIntlProvider {...props} />
