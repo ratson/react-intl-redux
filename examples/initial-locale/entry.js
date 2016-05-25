@@ -1,12 +1,16 @@
 /* global document */
-import {addLocaleData, FormattedMessage} from 'react-intl';
+import {addLocaleData, FormattedMessage} from 'react-intl'
 import {createStore, combineReducers} from 'redux'
 import {Provider, intlReducer} from 'react-intl-redux'
 import itLocaleData from 'react-intl/locale-data/it'
+import zhLocaleData from 'react-intl/locale-data/zh'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-addLocaleData(itLocaleData)
+addLocaleData([
+  ...itLocaleData,
+  ...zhLocaleData,
+])
 
 const reducer = combineReducers({
   intl: intlReducer,
