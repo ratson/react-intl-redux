@@ -7,6 +7,7 @@ const mapStateToProps = (state) => {
   const {intl} = state
   return {
     ...intl,
+    key: intl.locale,
   }
 }
 
