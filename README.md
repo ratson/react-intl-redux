@@ -14,7 +14,7 @@ npm install react-intl-redux react react-intl react-redux --save
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { FormattedNumber } from 'react-intl';
+import { FormattedNumber } from 'react-intl'
 import { createStore, combineReducers } from 'redux'
 import { Provider, intlReducer } from 'react-intl-redux'
 import reducers from '<project-path>/reducers'
