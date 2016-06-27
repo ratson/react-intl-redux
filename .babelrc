@@ -1,6 +1,7 @@
 {
   "plugins": [
     "check-es2015-constants",
+    "dev-expression",
     "syntax-jsx",
     "transform-es2015-arrow-functions",
     "transform-es2015-block-scoped-functions",
