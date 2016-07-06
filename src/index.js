@@ -1,3 +1,4 @@
+export IntlProvider from './components/IntlProvider'
 export Provider from './components/Provider'
 
 export const UPDATE = '@@intl/UPDATE'
