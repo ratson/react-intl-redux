@@ -14,9 +14,10 @@ npm install react-intl-redux react react-intl react-redux --save
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { FormattedNumber } from 'react-intl'
-import { createStore, combineReducers } from 'redux'
-import { Provider, intlReducer } from 'react-intl-redux'
+import {createStore, combineReducers} from 'redux'
+import {FormattedNumber} from 'react-intl'
+import {IntlProvider, intlReducer} from 'react-intl-redux'
+import {Provider} from 'react-redux'
 import reducers from '<project-path>/reducers'
 
 const reducer = combineReducers({
@@ -28,18 +29,15 @@ const store = createStore(reducer)
 
 const App = () => {
   return (
-    <p>
-      <FormattedNumber value={1000} />
-    </p>
+    <Provider store={store}>
+      <IntlProvider>
+        <FormattedNumber value={1000} />
+      </IntlProvider>
+    </Provider>
   )
 }
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('container')
-)
+ReactDOM.render(<App />, document.getElementById('container'))
 ```
 
 ### Provide `locale` and `messages` on load
@@ -57,22 +55,18 @@ const initialState = {
   // ...other initialState
 }
 const store = createStore(reducer, initialState)
-
-<Provider store={store}>
-  <App />
-</Provider>
 ```
 
 Refer to the [`initial-locale` example](https://github.com/ratson/react-intl-redux/tree/master/examples/initial-locale) for more details.
 
 ### Switch `locale` and `messages` on request
 
-You could also switch `locale` on user's request by dispatching `update` action.
+You could also switch `locale` on user's request by dispatching `updateIntl` action.
 
 ```js
-import {update} from 'react-intl-redux'
+import {updateIntl} from 'react-intl-redux'
 
-dispatch(update({
+dispatch(updateIntl({
   locale,
   messages,
 }))
