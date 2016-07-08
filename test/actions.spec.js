@@ -2,9 +2,9 @@ import should from 'should'
 
 import {UPDATE, updateIntl} from '../src'
 
-describe('update action', function() {
+describe('updateIntl', function() {
 
-  it('creates actions', () => {
+  it('should create action', () => {
     const locale = 'it'
     const messages = {}
     should(updateIntl({locale, messages})).be.eql({
