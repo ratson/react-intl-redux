@@ -10,4 +10,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-return connect(mapStateToProps)(IntlProvider)
+export default connect(mapStateToProps)(IntlProvider)
