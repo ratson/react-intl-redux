@@ -16,8 +16,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {createStore, combineReducers} from 'redux'
 import {FormattedNumber} from 'react-intl'
-import {IntlProvider, intlReducer} from 'react-intl-redux'
-import {Provider} from 'react-redux'
+import {Provider, intlReducer} from 'react-intl-redux'
 import reducers from '<project-path>/reducers'
 
 const reducer = combineReducers({
@@ -30,9 +29,7 @@ const store = createStore(reducer)
 const App = () => {
   return (
     <Provider store={store}>
-      <IntlProvider>
-        <FormattedNumber value={1000} />
-      </IntlProvider>
+      <FormattedNumber value={1000} />
     </Provider>
   )
 }
@@ -71,3 +68,21 @@ dispatch(updateIntl({
   messages,
 }))
 ```
+
+### `Provider` vs `IntlProvider`
+
+In most cases, `react-intl-redux` will be wrapped immediately after `Provider` from `react-redux`. For convenient, `react-intl-redux` provides `Provider` to do that for you.
+
+However, if you don't want it, you could do it manually via `IntlProvider`. For example,
+
+```js
+import {IntlProvider} from 'react-intl-redux'
+import {Provider} from 'react-redux'
+
+<Provider store={store}>
+  <IntlProvider>
+    <App />
+  </IntlProvider>
+</Provider>
+```
+ 

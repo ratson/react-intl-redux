@@ -4,12 +4,12 @@ import warning from 'warning'
 
 import IntlProvider from './IntlProvider'
 
-const Provider = ({store, ...props}) => {
-  warning(!(props.locale || props.messages), '[react-intl-redux] pass `locale` and `messages` is deprecated, please set them in `initalState` instead. https://github.com/ratson/react-intl-redux/issues/4')  // eslint-disable-line
-  warning(true, '[react-intl-redux] `Provider` is going to be removed, use `IntlProvider` instead')  // eslint-disable-line
+const Provider = ({store, children}) => {
   return (
     <ReduxProvider store={store}>
-      <IntlProvider {...props} />
+      <IntlProvider>
+        {children}
+      </IntlProvider>
     </ReduxProvider>
   )
 }

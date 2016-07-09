@@ -1,5 +1,11 @@
 ## HEAD
 
+##### Breaking Changes
+- Do not accept `props` for `Privider`
+
+##### General
+
+- Export `IntlPrivider`
+
 ##### Deprecations
-- Deprecate `Privider` in favor of `IntlProvider`
 - Deprecate `update` in favor of `updateIntl`
