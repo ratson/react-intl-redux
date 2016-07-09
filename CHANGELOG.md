@@ -1,4 +1,4 @@
-## HEAD
+## v0.1.0
 
 ##### Breaking Changes
 - Do not accept `props` for `Privider`
