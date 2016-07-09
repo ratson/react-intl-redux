@@ -1,7 +1,8 @@
 /* global document */
 import {addLocaleData, FormattedMessage} from 'react-intl'
 import {createStore, combineReducers} from 'redux'
-import {Provider, intlReducer} from 'react-intl-redux'
+import {IntlProvider, intlReducer} from 'react-intl-redux'
+import {Provider} from 'react-redux'
 import itLocaleData from 'react-intl/locale-data/it'
 import zhLocaleData from 'react-intl/locale-data/zh'
 import React from 'react'
@@ -28,17 +29,16 @@ const store = createStore(reducer, initialState)
 
 const App = () => {
   return (
-    <p>
-      <FormattedMessage id="app.greeting" defaultMessage="你好!" />
-    </p>
+    <Provider store={store}>
+      <IntlProvider>
+        <p>
+          <FormattedMessage id="app.greeting" defaultMessage="你好!" />
+        </p>
+      </IntlProvider>
+    </Provider>
   )
 }
 
 const rootDiv = document.createElement('div')
 document.body.appendChild(rootDiv)
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  rootDiv
-)
+ReactDOM.render(<App />, rootDiv)
