@@ -5,12 +5,22 @@ import {intlReducer} from '../src'
 describe('intlReducer', function() {
 
   it('should set initial state', () => {
-    const locale = 'it'
-    const messages = {}
     should(intlReducer(undefined, {})).be.eql({
       locale: 'en',
       messages: {},
     })
+  })
+
+  it('can update state', () => {
+    const payload = {
+      locale: 'it',
+      messages: {},
+    }
+    const action = {
+      type: '@@intl/UPDATE',
+      payload,
+    }
+    should(intlReducer(undefined, action)).be.eql(payload)
   })
 
 })
