@@ -11,7 +11,7 @@ export const updateIntl = ({locale, messages}) => ({
 })
 
 export const update = (intl) => {
-  warning(true, '[react-intl-redux] `update` is going to be removed, use `updateIntl` instead')
+  warning(false, '[react-intl-redux] `update` is going to be removed, use `updateIntl` instead')
   return updateIntl(intl)
 }
 
