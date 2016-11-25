@@ -26,15 +26,13 @@ const reducer = combineReducers({
 
 const store = createStore(reducer)
 
-const App = () => {
-  return (
-    <Provider store={store}>
-      <FormattedNumber value={1000} />
-    </Provider>
-  )
-}
+const App = () => (
+  <Provider store={store}>
+    <FormattedNumber value={1000}/>
+  </Provider>
+)
 
-ReactDOM.render(<App />, document.getElementById('container'))
+ReactDOM.render(<App/>, document.getElementById('container'))
 ```
 
 ### Provide `locale` and `messages` on load
@@ -63,7 +61,7 @@ You could also switch `locale` on user's request by dispatching `updateIntl` act
 ```js
 import {updateIntl} from 'react-intl-redux'
 
-dispatch(updateIntl({
+store.dispatch(updateIntl({
   locale,
   messages,
 }))
@@ -76,13 +74,15 @@ In most cases, `react-intl-redux` will be wrapped immediately after `Provider` f
 However, if you don't want it, you could do it manually via `IntlProvider`. For example,
 
 ```js
+import React from 'react'
 import {IntlProvider} from 'react-intl-redux'
 import {Provider} from 'react-redux'
 
-<Provider store={store}>
-  <IntlProvider>
-    <App />
-  </IntlProvider>
-</Provider>
+const App = () => (
+  <Provider store={store}>
+    <IntlProvider>
+      <App/>
+    </IntlProvider>
+  </Provider>
+)
 ```
- 
