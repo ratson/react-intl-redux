@@ -1,4 +1,4 @@
-import {connect, Provider as ReduxProvider} from 'react-redux'
+import {Provider as ReduxProvider} from 'react-redux'
 import React, {PropTypes} from 'react'
 
 import IntlProvider from './IntlProvider'
