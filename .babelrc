@@ -1,20 +1,19 @@
 {
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": [
+          "last 2 versions",
+          "Android > 2",
+          "last 2 ChromeAndroid versions"
+        ],
+        "node": 4
+      }
+    }],
+    "stage-1",
+    "react"
+  ],
   "plugins": [
-    "check-es2015-constants",
-    "dev-expression",
-    "syntax-jsx",
-    "transform-es2015-arrow-functions",
-    "transform-es2015-block-scoped-functions",
-    "transform-es2015-block-scoping",
-    "transform-es2015-destructuring",
-    "transform-es2015-function-name",
-    "transform-es2015-literals",
-    "transform-es2015-modules-commonjs",
-    "transform-es2015-parameters",
-    "transform-es2015-shorthand-properties",
-    "transform-es2015-spread",
-    "transform-export-extensions",
-    "transform-object-rest-spread",
-    "transform-react-jsx"
+    "dev-expression"
   ]
 }
