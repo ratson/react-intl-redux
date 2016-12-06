@@ -5,7 +5,7 @@
   "main": "lib/index",
   "scripts": {
     "build": "babel src --out-dir lib",
-    "clean": "rimraf lib dist coverage",
+    "clean": "rimraf lib coverage",
     "lint": "eslint .",
     "prepublish": "npm-run-all clean build",
     "test": "mocha --compilers js:babel-register --recursive"
