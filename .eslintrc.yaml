@@ -1,0 +1,9 @@
+extends:
+  - concise
+  - concise-react
+parser: babel-eslint
+plugins:
+  - babel
+rules:
+  object-curly-spacing: off
+  babel/object-curly-spacing: error

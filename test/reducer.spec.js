@@ -2,8 +2,7 @@ import should from 'should'
 
 import {intlReducer} from '../src'
 
-describe('intlReducer', function() {
-
+describe('intlReducer', () => {
   it('should set initial state', () => {
     should(intlReducer(undefined, {})).be.eql({
       locale: 'en',
@@ -22,5 +21,4 @@ describe('intlReducer', function() {
     }
     should(intlReducer(undefined, action)).be.eql(payload)
   })
-
 })

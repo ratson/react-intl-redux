@@ -25,5 +25,5 @@ export function intlReducer(state = initialState, action) {
     return state
   }
 
-  return { ...state, ...action.payload }
+  return {...state, ...action.payload}
 }

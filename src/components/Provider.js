@@ -3,15 +3,13 @@ import React, {PropTypes} from 'react'
 
 import IntlProvider from './IntlProvider'
 
-const Provider = ({store, children}) => {
-  return (
-    <ReduxProvider store={store}>
-      <IntlProvider>
-        {children}
-      </IntlProvider>
-    </ReduxProvider>
+const Provider = ({store, children}) => (
+  <ReduxProvider store={store}>
+    <IntlProvider>
+      {children}
+    </IntlProvider>
+  </ReduxProvider>
   )
-}
 
 Provider.propTypes = {
   children: PropTypes.element.isRequired,

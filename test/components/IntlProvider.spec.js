@@ -7,8 +7,7 @@ import should from 'should'
 
 import {IntlProvider, intlReducer} from '../../src'
 
- describe('IntlProvider', () => {
-
+describe('IntlProvider', () => {
   it('should render default en locale', () => {
     const reducer = combineReducers({
       intl: intlReducer,
@@ -17,12 +16,11 @@ import {IntlProvider, intlReducer} from '../../src'
     const App = () => (
       <Provider store={store}>
         <IntlProvider>
-          <FormattedNumber value={1000} />
+          <FormattedNumber value={1000}/>
         </IntlProvider>
       </Provider>
     )
-    const app = shallow(<App />)
+    const app = shallow(<App/>)
     should(app.html()).be.exactly('<span>1,000</span>')
   })
-
 })

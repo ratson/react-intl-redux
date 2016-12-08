@@ -2,8 +2,7 @@ import should from 'should'
 
 import {UPDATE, updateIntl} from '../src'
 
-describe('updateIntl', function() {
-
+describe('updateIntl', () => {
   it('should create action', () => {
     const locale = 'it'
     const messages = {}
@@ -12,5 +11,4 @@ describe('updateIntl', function() {
       payload: {locale, messages},
     })
   })
-
 })

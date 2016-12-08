@@ -27,18 +27,16 @@ const initialState = {
 }
 const store = createStore(reducer, initialState)
 
-const App = () => {
-  return (
-    <Provider store={store}>
-      <IntlProvider>
-        <p>
-          <FormattedMessage id="app.greeting" defaultMessage="你好!" />
-        </p>
-      </IntlProvider>
-    </Provider>
+const App = () => (
+  <Provider store={store}>
+    <IntlProvider>
+      <p>
+        <FormattedMessage id="app.greeting" defaultMessage="你好!"/>
+      </p>
+    </IntlProvider>
+  </Provider>
   )
-}
 
 const rootDiv = document.createElement('div')
 document.body.appendChild(rootDiv)
-ReactDOM.render(<App />, rootDiv)
+ReactDOM.render(<App/>, rootDiv)
