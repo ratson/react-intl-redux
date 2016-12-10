@@ -86,3 +86,7 @@ const App = () => (
   </Provider>
 )
 ```
+
+### Use with `redux-immutable`
+
+See the usage in [test](https://github.com/ratson/react-intl-redux/blob/master/test/immutable.spec.js).
