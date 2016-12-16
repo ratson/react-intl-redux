@@ -1,3 +1,8 @@
+## v0.3.0
+
+##### Breaking Changes
+- Update `react-redux` from `^4.4.6` to `^5.0.1`
+
 ## v0.2.0
 
 ##### Breaking Changes
