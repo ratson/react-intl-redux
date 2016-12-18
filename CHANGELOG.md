@@ -2,6 +2,7 @@
 
 ##### Breaking Changes
 - Update `react-redux` from `^4.4.6` to `^5.0.1`
+- Remove unnecessary React propTypes from the production build
 
 ## v0.2.0
 
