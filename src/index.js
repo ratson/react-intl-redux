@@ -15,7 +15,7 @@ export const update = (intl) => {
   return updateIntl(intl)
 }
 
-const initialState = {
+export const initialState = {
   locale: 'en',
   messages: {},
 }
