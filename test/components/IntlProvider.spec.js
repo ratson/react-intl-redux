@@ -17,11 +17,11 @@ describe('IntlProvider', () => {
     const App = () => (
       <Provider store={store}>
         <IntlProvider>
-          <FormattedNumber value={1000}/>
+          <FormattedNumber value={1000} />
         </IntlProvider>
       </Provider>
     )
-    const app = shallow(<App/>)
+    const app = shallow(<App />)
     should(app.html()).be.exactly('<span>1,000</span>')
   })
 })

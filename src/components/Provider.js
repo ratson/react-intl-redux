@@ -1,5 +1,6 @@
 import {Provider as ReduxProvider} from 'react-redux'
 import React, {PropTypes} from 'react'
+import storeShape from 'react-redux/lib/utils/storeShape'
 
 import IntlProvider from './IntlProvider'
 
@@ -13,7 +14,7 @@ const Provider = ({store, children}) => (
 
 Provider.propTypes = {
   children: PropTypes.element.isRequired,
-  store: PropTypes.object.isRequired,
+  store: storeShape.isRequired,
 }
 
 export default Provider
