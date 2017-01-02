@@ -1,13 +1,10 @@
 import should from 'should'
 
-import {intlReducer} from '../src'
+import {initialState, intlReducer, UPDATE} from '../src'
 
 describe('intlReducer', () => {
   it('should set initial state', () => {
-    should(intlReducer(undefined, {})).be.eql({
-      locale: 'en',
-      messages: {},
-    })
+    should(intlReducer(undefined, {})).be.eql(initialState)
   })
 
   it('can update state', () => {
@@ -16,7 +13,7 @@ describe('intlReducer', () => {
       messages: {},
     }
     const action = {
-      type: '@@intl/UPDATE',
+      type: UPDATE,
       payload,
     }
     should(intlReducer(undefined, action)).be.eql(payload)
