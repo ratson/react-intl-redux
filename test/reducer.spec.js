@@ -2,6 +2,15 @@ import should from 'should'
 
 import {initialState, intlReducer, UPDATE} from '../src'
 
+describe('initialState', () => {
+  it('should default to en', () => {
+    should(initialState).be.eql({
+      locale: 'en',
+      messages: {},
+    })
+  })
+})
+
 describe('intlReducer', () => {
   it('should set initial state', () => {
     should(intlReducer(undefined, {})).be.eql(initialState)
