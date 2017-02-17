@@ -1,3 +1,8 @@
+## v0.4.0
+
+##### Breaking Changes
+- Change `react-intl`, `react-redux`, `redux` to be `peerDependencies`
+
 ## v0.3.0
 
 ##### Breaking Changes

@@ -6,7 +6,7 @@ React Intl Redux
 ## Installation
 
 ```
-npm install react-intl-redux react react-intl react-redux --save
+npm install react-intl-redux react react-intl react-redux redux --save
 ```
 
 ## Usage
