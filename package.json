@@ -13,7 +13,7 @@
   },
   "peerDependencies": {
     "react-intl": "^2.2.2",
-    "react-redux": "^5.0.1"
+    "react-redux": "^5.0.3"
   },
   "dependencies": {
     "warning": "^3.0.0"
