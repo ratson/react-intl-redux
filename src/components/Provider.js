@@ -1,6 +1,6 @@
 import {Provider as ReduxProvider} from 'react-redux'
 import React, {PropTypes} from 'react'
-import storeShape from 'react-redux/lib/utils/storeShape'
+import {storeShape} from 'react-redux/lib/utils/PropTypes'
 
 import IntlProvider from './IntlProvider'
 
