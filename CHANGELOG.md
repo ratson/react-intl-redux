@@ -1,3 +1,8 @@
+## v0.4.1
+
+- Remove usage of `storeShape`
+
+
 ## v0.4.0
 
 ##### Breaking Changes

@@ -1,9 +1,9 @@
 import {Provider as ReduxProvider} from 'react-redux'
 import React, {PropTypes} from 'react'
-import storeShape from 'react-redux/lib/utils/storeShape'
 
 import IntlProvider from './IntlProvider'
 
+// eslint-disable-next-line react/prop-types
 const Provider = ({store, children}) => (
   <ReduxProvider store={store}>
     <IntlProvider>
@@ -14,7 +14,6 @@ const Provider = ({store, children}) => (
 
 Provider.propTypes = {
   children: PropTypes.element.isRequired,
-  store: storeShape.isRequired,
 }
 
 export default Provider
