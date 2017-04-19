@@ -1,6 +1,6 @@
 {
   "name": "react-intl-redux",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Redux binding for React Intl",
   "main": "lib/index",
   "scripts": {
@@ -16,6 +16,7 @@
     "react-redux": "^5.0.1"
   },
   "dependencies": {
+    "prop-types": "^15.5.8",
     "warning": "^3.0.0"
   },
   "devDependencies": {
