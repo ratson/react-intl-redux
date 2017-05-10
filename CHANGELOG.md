@@ -1,3 +1,8 @@
+## v0.5.0
+
+- React 15.5 compatibility
+
+
 ## v0.4.1
 
 - Remove usage of `storeShape`
