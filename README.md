@@ -74,6 +74,11 @@ store.dispatch(updateIntl({
 }))
 ```
 
+React Intl in browsers only contain locale data for basic English
+by default, see
+[Loading Locale Data](https://github.com/yahoo/react-intl/wiki#loading-locale-data)
+for loading locale data in browsers.
+
 ### `Provider` vs `IntlProvider`
 
 In most cases, `react-intl-redux` will be wrapped immediately after `Provider` from `react-redux`. For convenient, `react-intl-redux` provides `Provider` to do that for you.
