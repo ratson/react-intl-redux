@@ -8,7 +8,16 @@ describe('updateIntl', () => {
     const messages = {}
     should(updateIntl({locale, messages})).be.eql({
       type: UPDATE,
-      payload: {locale, messages},
+      payload: {locale, messages, formats: undefined},
+    })
+  })
+
+  it('should include formats', () => {
+    const locale = 'it'
+    const formats = {}
+    should(updateIntl({locale, formats})).be.eql({
+      type: UPDATE,
+      payload: {locale, formats, messages: undefined},
     })
   })
 })
