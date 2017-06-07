@@ -5,9 +5,9 @@ export Provider from './components/Provider'
 
 export const UPDATE = '@@intl/UPDATE'
 
-export const updateIntl = ({locale, messages}) => ({
+export const updateIntl = ({locale, formats, messages}) => ({
   type: UPDATE,
-  payload: {locale, messages},
+  payload: {locale, formats, messages},
 })
 
 export const update = (intl) => {
