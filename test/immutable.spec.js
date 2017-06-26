@@ -1,5 +1,5 @@
 import Immutable from 'immutable'
-import should from 'should'
+import test from 'ava'
 
 import { createStore } from 'redux'
 import { combineReducers } from 'redux-immutable'
@@ -10,27 +10,24 @@ import React from 'react'
 
 import { IntlProvider, intlReducer } from '../src'
 
-describe('IntlProvider', () => {
-  it('should render default en locale', () => {
-    const reducer = combineReducers({
-      intl: intlReducer,
-    })
-    const initialState = Immutable.fromJS({
-      intl: {
-        locale: 'en',
-        messages: {},
-      },
-    })
-    const store = createStore(reducer, initialState)
-    const intlSelector = state => state.get('intl').toJS()
-    const App = () => (
-      <Provider store={store}>
-        <IntlProvider intlSelector={intlSelector}>
-          <FormattedNumber value={1000} />
-        </IntlProvider>
-      </Provider>
-    )
-    const app = shallow(<App />)
-    should(app.html()).be.exactly('<span>1,000</span>')
+test('IntlProvider should render default en locale', t => {
+  const reducer = combineReducers({
+    intl: intlReducer,
   })
+  const initialState = Immutable.fromJS({
+    intl: {
+      locale: 'en',
+      messages: {},
+    },
+  })
+  const store = createStore(reducer, initialState)
+  const intlSelector = state => state.get('intl').toJS()
+  const App = () =>
+    <Provider store={store}>
+      <IntlProvider intlSelector={intlSelector}>
+        <FormattedNumber value={1000} />
+      </IntlProvider>
+    </Provider>
+  const app = shallow(<App />)
+  t.is(app.html(), '<span>1,000</span>')
 })

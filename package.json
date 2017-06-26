@@ -8,7 +8,7 @@
     "clean": "del lib coverage",
     "lint": "eslint --ext js,md .",
     "prepublish": "run-s clean build",
-    "test": "mocha --compilers js:babel-register --recursive",
+    "test": "ava",
     "posttest": "npm run lint"
   },
   "peerDependencies": {
@@ -20,6 +20,7 @@
     "warning": "^3.0.0"
   },
   "devDependencies": {
+    "ava": "^0.19.1",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-plugin-dev-expression": "^0.2.1",
@@ -35,11 +36,11 @@
     "eslint-config-concise": "^0.7.1",
     "eslint-config-concise-esnext": "^0.7.1",
     "eslint-config-concise-react": "^0.7.1",
+    "eslint-plugin-ava": "^4.2.1",
     "eslint-plugin-babel": "^4.1.1",
     "eslint-plugin-eslint-comments": "^1.0.2",
     "eslint-plugin-react": "^7.1.0",
     "immutable": "^3.8.1",
-    "mocha": "^3.4.2",
     "npm-run-all": "^4.0.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -47,8 +48,7 @@
     "react-redux": "^5.0.5",
     "react-test-renderer": "^15.6.1",
     "redux": "^3.7.1",
-    "redux-immutable": "^4.0.0",
-    "should": "^11.2.1"
+    "redux-immutable": "^4.0.0"
   },
   "repository": "ratson/react-intl-redux",
   "license": "MIT",
@@ -66,5 +66,11 @@
     "intl",
     "i18n",
     "redux"
-  ]
+  ],
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  }
 }

@@ -1,4 +1,4 @@
-import should from 'should'
+import test from 'ava'
 
 import { createStore, combineReducers } from 'redux'
 import { FormattedNumber } from 'react-intl'
@@ -8,20 +8,17 @@ import React from 'react'
 
 import { IntlProvider, intlReducer } from '../../src'
 
-describe('IntlProvider', () => {
-  it('should render default en locale', () => {
-    const reducer = combineReducers({
-      intl: intlReducer,
-    })
-    const store = createStore(reducer)
-    const App = () => (
-      <Provider store={store}>
-        <IntlProvider>
-          <FormattedNumber value={1000} />
-        </IntlProvider>
-      </Provider>
-    )
-    const app = shallow(<App />)
-    should(app.html()).be.exactly('<span>1,000</span>')
+test('IntlProvider should render default en locale', t => {
+  const reducer = combineReducers({
+    intl: intlReducer,
   })
+  const store = createStore(reducer)
+  const App = () =>
+    <Provider store={store}>
+      <IntlProvider>
+        <FormattedNumber value={1000} />
+      </IntlProvider>
+    </Provider>
+  const app = shallow(<App />)
+  t.is(app.html(), '<span>1,000</span>')
 })

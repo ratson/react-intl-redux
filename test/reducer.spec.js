@@ -1,30 +1,26 @@
-import should from 'should'
+import test from 'ava'
 
 import { initialState, intlReducer, UPDATE } from '../src'
 
-describe('initialState', () => {
-  it('should default to en', () => {
-    should(initialState).be.eql({
-      locale: 'en',
-      messages: {},
-    })
+test('initialState should default to en', t => {
+  t.deepEqual(initialState, {
+    locale: 'en',
+    messages: {},
   })
 })
 
-describe('intlReducer', () => {
-  it('should set initial state', () => {
-    should(intlReducer(undefined, {})).be.eql(initialState)
-  })
+test('intlReducer should set initial state', t => {
+  t.deepEqual(intlReducer(undefined, {}), initialState)
+})
 
-  it('can update state', () => {
-    const payload = {
-      locale: 'it',
-      messages: {},
-    }
-    const action = {
-      type: UPDATE,
-      payload,
-    }
-    should(intlReducer(undefined, action)).be.eql(payload)
-  })
+test('intlReducer can update state', t => {
+  const payload = {
+    locale: 'it',
+    messages: {},
+  }
+  const action = {
+    type: UPDATE,
+    payload,
+  }
+  t.deepEqual(intlReducer(undefined, action), payload)
 })

@@ -1,23 +1,21 @@
-import should from 'should'
+import test from 'ava'
 
 import { UPDATE, updateIntl } from '../src'
 
-describe('updateIntl', () => {
-  it('should create action', () => {
-    const locale = 'it'
-    const messages = {}
-    should(updateIntl({ locale, messages })).be.eql({
-      type: UPDATE,
-      payload: { locale, messages, formats: undefined },
-    })
+test('updateIntl should create action', t => {
+  const locale = 'it'
+  const messages = {}
+  t.deepEqual(updateIntl({ locale, messages }), {
+    type: UPDATE,
+    payload: { locale, messages, formats: undefined },
   })
+})
 
-  it('should include formats', () => {
-    const locale = 'it'
-    const formats = {}
-    should(updateIntl({ locale, formats })).be.eql({
-      type: UPDATE,
-      payload: { locale, formats, messages: undefined },
-    })
+test('updateIntl should include formats', t => {
+  const locale = 'it'
+  const formats = {}
+  t.deepEqual(updateIntl({ locale, formats }), {
+    type: UPDATE,
+    payload: { locale, formats, messages: undefined },
   })
 })

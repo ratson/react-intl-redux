@@ -2,5 +2,8 @@ extends:
   - concise
   - concise-esnext
   - concise-react
+  - plugin:ava/recommended
+plugins:
+  - ava
 rules:
   react/jsx-filename-extension: off
