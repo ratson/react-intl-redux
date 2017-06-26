@@ -1,5 +1,4 @@
-React Intl Redux
-=========================
+# React Intl Redux
 
 [Redux](https://github.com/reactjs/redux) binding for [React Intl](https://github.com/yahoo/react-intl).
 
@@ -17,9 +16,9 @@ npm install react-intl-redux react react-intl react-redux redux --save
 ```js
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {createStore, combineReducers} from 'redux'
-import {FormattedNumber} from 'react-intl'
-import {Provider, intlReducer} from 'react-intl-redux'
+import { createStore, combineReducers } from 'redux'
+import { FormattedNumber } from 'react-intl'
+import { Provider, intlReducer } from 'react-intl-redux'
 import reducers from '<project-path>/reducers'
 
 const reducer = combineReducers({
@@ -66,7 +65,7 @@ You could also switch `locale` on user's request by dispatching `updateIntl` act
 <!-- eslint-disable no-undef -->
 
 ```js
-import {updateIntl} from 'react-intl-redux'
+import { updateIntl } from 'react-intl-redux'
 
 store.dispatch(updateIntl({
   locale,
@@ -89,8 +88,8 @@ However, if you don't want it, you could do it manually via `IntlProvider`. For 
 
 ```js
 import React from 'react'
-import {IntlProvider} from 'react-intl-redux'
-import {Provider} from 'react-redux'
+import { IntlProvider } from 'react-intl-redux'
+import { Provider } from 'react-redux'
 
 const App = () => (
   <Provider store={store}>

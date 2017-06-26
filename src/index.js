@@ -5,12 +5,12 @@ export Provider from './components/Provider'
 
 export const UPDATE = '@@intl/UPDATE'
 
-export const updateIntl = ({locale, formats, messages}) => ({
+export const updateIntl = ({ locale, formats, messages }) => ({
   type: UPDATE,
-  payload: {locale, formats, messages},
+  payload: { locale, formats, messages },
 })
 
-export const update = (intl) => {
+export const update = intl => {
   warning(false, '[react-intl-redux] `update` is going to be removed, use `updateIntl` instead')
   return updateIntl(intl)
 }
@@ -25,5 +25,5 @@ export function intlReducer(state = initialState, action) {
     return state
   }
 
-  return {...state, ...action.payload}
+  return { ...state, ...action.payload }
 }

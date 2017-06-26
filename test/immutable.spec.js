@@ -1,14 +1,14 @@
 import Immutable from 'immutable'
 import should from 'should'
 
-import {createStore} from 'redux'
-import {combineReducers} from 'redux-immutable'
-import {FormattedNumber} from 'react-intl'
-import {Provider} from 'react-redux'
-import {shallow} from 'enzyme'
+import { createStore } from 'redux'
+import { combineReducers } from 'redux-immutable'
+import { FormattedNumber } from 'react-intl'
+import { Provider } from 'react-redux'
+import { shallow } from 'enzyme'
 import React from 'react'
 
-import {IntlProvider, intlReducer} from '../src'
+import { IntlProvider, intlReducer } from '../src'
 
 describe('IntlProvider', () => {
   it('should render default en locale', () => {

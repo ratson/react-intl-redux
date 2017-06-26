@@ -1,8 +1,8 @@
 /* global document */
-import {addLocaleData, FormattedMessage} from 'react-intl'
-import {createStore, combineReducers} from 'redux'
-import {IntlProvider, intlReducer} from 'react-intl-redux'
-import {Provider} from 'react-redux'
+import { addLocaleData, FormattedMessage } from 'react-intl'
+import { createStore, combineReducers } from 'redux'
+import { IntlProvider, intlReducer } from 'react-intl-redux'
+import { Provider } from 'react-redux'
 import itLocaleData from 'react-intl/locale-data/it'
 import zhLocaleData from 'react-intl/locale-data/zh'
 import React from 'react'

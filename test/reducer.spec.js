@@ -1,6 +1,6 @@
 import should from 'should'
 
-import {initialState, intlReducer, UPDATE} from '../src'
+import { initialState, intlReducer, UPDATE } from '../src'
 
 describe('initialState', () => {
   it('should default to en', () => {
