@@ -82,7 +82,7 @@ for loading locale data in browsers.
 
 In most cases, `react-intl-redux` will be wrapped immediately after `Provider` from `react-redux`. For convenient, `react-intl-redux` provides `Provider` to do that for you.
 
-However, if you don't want it, you could do it manually via `IntlProvider`. For example,
+However, if you don't want it, you could do it manually via [`IntlProvider`](https://github.com/yahoo/react-intl/wiki/Components#intlprovider). For example,
 
 <!-- eslint-disable no-undef -->
 
@@ -98,6 +98,24 @@ const App = () => (
     </IntlProvider>
   </Provider>
 )
+```
+
+### Formatting Data
+
+`react-intl` provides two ways to format data, see the [official docs](https://github.com/yahoo/react-intl/wiki#formatting-data).
+
+To change `formats` through [React components](https://github.com/yahoo/react-intl/wiki/Components),
+
+<!-- eslint-disable no-undef -->
+
+```js
+import { updateIntl } from 'react-intl-redux'
+
+store.dispatch(updateIntl({
+  locale,
+  formats,
+  messages,
+}))
 ```
 
 ### Use with `redux-immutable`
