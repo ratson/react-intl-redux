@@ -8,10 +8,7 @@ import zhLocaleData from 'react-intl/locale-data/zh'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-addLocaleData([
-  ...itLocaleData,
-  ...zhLocaleData,
-])
+addLocaleData([...itLocaleData, ...zhLocaleData])
 
 const reducer = combineReducers({
   intl: intlReducer,
@@ -27,7 +24,7 @@ const initialState = {
 }
 const store = createStore(reducer, initialState)
 
-const App = () => (
+const App = () =>
   <Provider store={store}>
     <IntlProvider>
       <p>
@@ -35,8 +32,5 @@ const App = () => (
       </p>
     </IntlProvider>
   </Provider>
-  )
 
-const rootDiv = document.createElement('div')
-document.body.appendChild(rootDiv)
-ReactDOM.render(<App />, rootDiv)
+ReactDOM.render(<App />, document.getElementById('root'))
