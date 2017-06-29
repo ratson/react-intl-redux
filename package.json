@@ -20,7 +20,7 @@
     "warning": "^3.0.0"
   },
   "devDependencies": {
-    "ava": "^0.19.1",
+    "ava": "^0.20.0",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-plugin-dev-expression": "^0.2.1",
@@ -30,9 +30,9 @@
     "babel-preset-stage-1": "^6.24.1",
     "babel-register": "^6.24.1",
     "cross-env": "^5.0.1",
-    "del-cli": "^1.0.0",
+    "del-cli": "^1.1.0",
     "enzyme": "^2.9.1",
-    "eslint": "^3.19.0",
+    "eslint": "^4.1.1",
     "eslint-config-concise": "^0.7.1",
     "eslint-config-concise-esnext": "^0.7.1",
     "eslint-config-concise-react": "^0.7.1",
