@@ -1,3 +1,13 @@
+## v0.6.0
+
+##### Breaking Changes
+- Add `formats` to reducer. ([@mewdriller](https://github.com/mewdriller) in [#35](https://github.com/ratson/react-intl-redux/pull/35))
+
+##### Internal
+- Change to use `ava` for testing
+- Update example to use `create-react-app`
+
+
 ## v0.5.0
 
 - React 15.5 compatibility
