@@ -6,48 +6,46 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production babel src --out-dir lib",
     "clean": "del lib coverage",
-    "lint": "eslint --ext js,md .",
+    "lint": "eslint --ignore-path .gitignore --ext js,md .",
     "prepublish": "run-s clean build",
-    "test": "ava",
-    "posttest": "npm run lint"
+    "test": "run-p test:* lint",
+    "test:ava": "ava"
   },
   "peerDependencies": {
     "react-intl": "^2.2.2",
     "react-redux": "^5.0.1"
   },
   "dependencies": {
-    "prop-types": "^15.5.10",
+    "prop-types": "^15.6.0",
     "warning": "^3.0.0"
   },
   "devDependencies": {
-    "ava": "^0.20.0",
-    "babel-cli": "^6.24.1",
-    "babel-eslint": "^7.2.3",
+    "ava": "^0.22.0",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.0",
     "babel-plugin-dev-expression": "^0.2.1",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.6",
-    "babel-preset-env": "^1.5.2",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.8",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
-    "babel-register": "^6.24.1",
-    "cross-env": "^5.0.1",
+    "babel-register": "^6.26.0",
+    "cross-env": "^5.0.5",
     "del-cli": "^1.1.0",
-    "enzyme": "^2.9.1",
-    "eslint": "^4.1.1",
-    "eslint-config-concise": "^0.7.1",
-    "eslint-config-concise-esnext": "^0.7.1",
-    "eslint-config-concise-react": "^0.7.1",
-    "eslint-plugin-ava": "^4.2.1",
-    "eslint-plugin-babel": "^4.1.1",
-    "eslint-plugin-eslint-comments": "^1.0.2",
-    "eslint-plugin-react": "^7.1.0",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-15": "^1.0.0",
+    "eslint": "^4.7.2",
+    "eslint-config-concise": "^0.12.0",
+    "eslint-config-concise-ava": "^0.12.0",
+    "eslint-config-concise-esnext": "^0.12.0",
+    "eslint-config-concise-react": "^0.12.0",
     "immutable": "^3.8.1",
-    "npm-run-all": "^4.0.2",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-intl": "^2.3.0",
-    "react-redux": "^5.0.5",
-    "react-test-renderer": "^15.6.1",
-    "redux": "^3.7.1",
+    "npm-run-all": "^4.1.1",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "react-intl": "^2.4.0",
+    "react-redux": "^5.0.6",
+    "react-test-renderer": "^15.6.2",
+    "redux": "^3.7.2",
     "redux-immutable": "^4.0.0"
   },
   "repository": "ratson/react-intl-redux",
@@ -69,7 +67,8 @@
   ],
   "ava": {
     "require": [
-      "babel-register"
+      "babel-register",
+      "./test/helpers/enzyme-config"
     ],
     "babel": "inherit"
   }

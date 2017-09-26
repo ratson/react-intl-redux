@@ -1,4 +1,4 @@
-/* global document */
+/* globals document */
 import { addLocaleData, FormattedMessage } from 'react-intl'
 import { createStore, combineReducers } from 'redux'
 import { IntlProvider, intlReducer } from 'react-intl-redux'

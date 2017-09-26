@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 
 import IntlProvider from './IntlProvider'
 
-// eslint-disable-next-line react/prop-types
 const Provider = ({ store, children }) =>
   <ReduxProvider store={store}>
     <IntlProvider>
