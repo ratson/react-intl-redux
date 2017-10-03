@@ -17,8 +17,7 @@
     "react-redux": "^5.0.1"
   },
   "dependencies": {
-    "prop-types": "^15.6.0",
-    "warning": "^3.0.0"
+    "prop-types": "^15.6.0"
   },
   "devDependencies": {
     "ava": "^0.22.0",

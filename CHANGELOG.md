@@ -1,3 +1,8 @@
+## v0.7.0
+
+##### Breaking Changes
+- Remove deprecated `update` action, `updateIntl` should always be used
+
 ## v0.6.0
 
 ##### Breaking Changes

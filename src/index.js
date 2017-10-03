@@ -1,5 +1,3 @@
-import warning from 'warning'
-
 export IntlProvider from './components/IntlProvider'
 export Provider from './components/Provider'
 
@@ -9,11 +7,6 @@ export const updateIntl = ({ locale, formats, messages }) => ({
   type: UPDATE,
   payload: { locale, formats, messages },
 })
-
-export const update = intl => {
-  warning(false, '[react-intl-redux] `update` is going to be removed, use `updateIntl` instead')
-  return updateIntl(intl)
-}
 
 export const initialState = {
   locale: 'en',
