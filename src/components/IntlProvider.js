@@ -5,12 +5,14 @@ function defaultSelector(state) {
   return state.intl
 }
 
-const mapStateToProps = (state, { intlSelector = defaultSelector }) => {
+function defaultKeySelector(intl) {
+  return intl.locale
+}
+
+const mapStateToProps = (state, { intlSelector = defaultSelector, keySelector = defaultKeySelector }) => {
   const intl = intlSelector(state)
-  return {
-    ...intl,
-    key: intl.locale,
-  }
+  const key = keySelector(intl)
+  return { ...intl, key }
 }
 
 export default connect(mapStateToProps)(IntlProvider)
