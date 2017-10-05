@@ -13,12 +13,13 @@ test('IntlProvider should render default en locale', t => {
     intl: intlReducer,
   })
   const store = createStore(reducer)
-  const App = () =>
+  const App = () => (
     <Provider store={store}>
       <IntlProvider>
         <FormattedNumber value={1000} />
       </IntlProvider>
     </Provider>
+  )
   const app = shallow(<App />)
   t.is(app.html(), '<span>1,000</span>')
 })
