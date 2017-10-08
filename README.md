@@ -2,6 +2,9 @@
 
 [Redux](https://github.com/reactjs/redux) binding for [React Intl](https://github.com/yahoo/react-intl).
 
+Building idiomatic React Redux Application by
+having translations in store and dispatching action to update it.
+
 ## Installation
 
 ```
@@ -121,3 +124,7 @@ store.dispatch(updateIntl({
 ### Use with `redux-immutable`
 
 See the usage in [test](https://github.com/ratson/react-intl-redux/blob/master/test/immutable.spec.js).
+
+## Examples
+
+There are some examples under the [`examples`](./examples) folder for reference.
