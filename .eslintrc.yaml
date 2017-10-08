@@ -3,3 +3,5 @@ extends:
   - concise-esnext
   - concise-ava
   - concise-react
+rules:
+  comma-dangle: off

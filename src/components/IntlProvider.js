@@ -8,4 +8,6 @@ function defaultSelector(state) {
 const mapStateToProps = (state, { intlSelector = defaultSelector }) =>
   intlSelector(state)
 
-export default connect(mapStateToProps)(IntlProvider)
+export default connect(mapStateToProps, null, null, { pure: false })(
+  IntlProvider
+)

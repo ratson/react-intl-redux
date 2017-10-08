@@ -24,7 +24,7 @@ const initialState = {
 }
 const store = createStore(reducer, initialState)
 
-const App = () =>
+const App = () => (
   <Provider store={store}>
     <IntlProvider>
       <p>
@@ -32,5 +32,6 @@ const App = () =>
       </p>
     </IntlProvider>
   </Provider>
+)
 
 ReactDOM.render(<App />, document.getElementById('root'))
