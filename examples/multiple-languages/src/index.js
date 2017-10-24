@@ -43,10 +43,10 @@ const DevTools = createDevTools(
 )
 const store = createStore(reducer, {}, DevTools.instrument())
 
-const SwitchLocale = connect((state, props) => ({
+const SwitchLocale = connect(state => ({
   currentLocale: state.intl.locale,
   locales: state.locales,
-}))(({ currentLocale, locales, onChange }) => (
+}))(({ currentLocale, locales }) => (
   <select
     value={currentLocale}
     onChange={e =>
