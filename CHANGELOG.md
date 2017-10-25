@@ -1,7 +1,14 @@
+## Next
+
 ## v0.7.0
 
 ##### Breaking Changes
 - Remove deprecated `update` action, `updateIntl` should always be used
+- Remove `key` hack, see [#7](https://github.com/ratson/react-intl-redux/issues/7)
+
+##### Documentation
+- Add [multiple-languages](https://github.com/ratson/react-intl-redux/tree/master/examples/multiple-languages) example
+
 
 ## v0.6.0
 
