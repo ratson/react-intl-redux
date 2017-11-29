@@ -128,3 +128,15 @@ See the usage in [test](https://github.com/ratson/react-intl-redux/blob/master/t
 ## Examples
 
 There are some examples under the [`examples`](./examples) folder for reference.
+
+## Troubleshooting
+
+1. Why my connected component does not update after locale change?
+
+  By default, `connect()` expect a pure component, and `react-intl` rely on context to load messages, i.e. `props` will not be changed when locale change.
+
+  There are few solutions for this,
+
+  * Do a `forceUpdate` when changing locale.
+  * Mark the connecting compoent `{pure: false}`.
+  * Pass `locale` in `props`.
