@@ -88,7 +88,7 @@ class App extends React.Component {
               <FormattedMessage id="app.greeting" defaultMessage="Hello!" />
             </p>
             <p>
-              <button onClick={this.handleLoadlLocales}>
+              <button type="button" onClick={this.handleLoadlLocales}>
                 Local locales
               </button>{' '}
               <SwitchLocale />
