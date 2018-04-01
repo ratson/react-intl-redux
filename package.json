@@ -3,6 +3,7 @@
   "version": "0.7.0",
   "description": "Redux binding for React Intl",
   "main": "lib/index",
+  "side-effects": false,
   "scripts": {
     "build": "cross-env NODE_ENV=production babel src --out-dir lib",
     "clean": "del lib coverage",
