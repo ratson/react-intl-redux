@@ -1,11 +1,11 @@
 import test from 'ava'
 
-import { initialState, intlReducer, UPDATE } from '../src'
+import { initialState, intlReducer, UPDATE } from 'react-intl-redux'
 
 test('initialState should default to en', t => {
   t.deepEqual(initialState, {
     locale: 'en',
-    messages: {},
+    messages: {}
   })
 })
 
@@ -16,11 +16,11 @@ test('intlReducer should set initial state', t => {
 test('intlReducer can update state', t => {
   const payload = {
     locale: 'it',
-    messages: {},
+    messages: {}
   }
   const action = {
     type: UPDATE,
-    payload,
+    payload
   }
   t.deepEqual(intlReducer(undefined, action), payload)
 })

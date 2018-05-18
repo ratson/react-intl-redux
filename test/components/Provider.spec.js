@@ -5,11 +5,11 @@ import { FormattedNumber } from 'react-intl'
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { Provider, intlReducer } from '../../src'
+import { Provider, intlReducer } from 'react-intl-redux'
 
 test('Provider should render default en locale', t => {
   const reducer = combineReducers({
-    intl: intlReducer,
+    intl: intlReducer
   })
   const store = createStore(reducer)
   const App = () => (

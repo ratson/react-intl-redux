@@ -6,11 +6,11 @@ import { Provider } from 'react-redux'
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { IntlProvider, intlReducer, updateIntl } from '../src'
+import { IntlProvider, intlReducer, updateIntl } from 'react-intl-redux'
 
 test('change locale', t => {
   const reducer = combineReducers({
-    intl: intlReducer,
+    intl: intlReducer
   })
   const store = createStore(reducer)
   const App = () => (

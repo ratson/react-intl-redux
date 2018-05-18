@@ -6,11 +6,11 @@ import { Provider } from 'react-redux'
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { IntlProvider, intlReducer } from '../../src'
+import { IntlProvider, intlReducer } from 'react-intl-redux'
 
 test('IntlProvider should render default en locale', t => {
   const reducer = combineReducers({
-    intl: intlReducer,
+    intl: intlReducer
   })
   const store = createStore(reducer)
   const App = () => (

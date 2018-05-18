@@ -1,5 +1,7 @@
 {
   "private": true,
+  "name": "initial-locale-example",
+  "version": "0.0.0",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
@@ -8,7 +10,7 @@
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-intl": "^2.4.0",
-    "react-intl-redux": "file:../..",
+    "react-intl-redux": "0.7.0",
     "react-redux": "^5.0.6",
     "react-scripts": "1.0.17",
     "redux": "^3.7.2"

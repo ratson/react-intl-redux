@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import { UPDATE, updateIntl } from '../src'
+import { UPDATE, updateIntl } from 'react-intl-redux'
 
 test('updateIntl should create action', t => {
   const locale = 'it'
