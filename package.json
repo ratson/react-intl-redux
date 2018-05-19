@@ -106,7 +106,6 @@
       "text"
     ]
   },
-  "sideEffects": false,
   "resolutions": {
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.8.2",

@@ -1,5 +1,11 @@
 ## Next
 
+## v1.0.0
+
+##### Enhancements
+- Set `sideEffects` to `false` for webpack
+
+
 ## v0.7.0
 
 ##### Breaking Changes
