@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ignore-path .gitignore --ext js,md .",
+    "release": "lerna publish",
     "test": "run-p test:* lint",
     "test:ava": "ava",
     "coverage": "nyc ava",
@@ -30,6 +31,7 @@
     "immutable": "^3.8.2",
     "jsdom": "^11.10.0",
     "jsdom-global": "^3.0.2",
+    "lerna": "^3.0.0-beta.21",
     "lint-staged": "^7.1.0",
     "npm-run-all": "^4.1.3",
     "nyc": "^11.8.0",
@@ -114,5 +116,6 @@
   "workspaces": [
     "package",
     "examples/*"
-  ]
+  ],
+  "name": "react-intl-redux"
 }
