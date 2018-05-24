@@ -1,5 +1,11 @@
 ## Next
 
+## v2.0.0
+
+##### Breaking Changes
+- Use `locale` as `key` for `IntlProvider` by default.
+
+
 ## v1.0.0
 
 ##### Enhancements

@@ -133,10 +133,12 @@ There are some examples under the [`examples`](./examples) folder for reference.
 
 1. Why my connected component does not update after locale change?
 
-  By default, `connect()` expect a pure component, and `react-intl` rely on context to load messages, i.e. `props` will not be changed when locale change.
+  By default, `locale` is used as `key` for `IntlProvider`, which will trigger re-render when locale changes, things should just work.
 
-  There are few solutions for this,
+  If it doesn't, here are few solutions could be tried,
 
-  * Do a `forceUpdate` when changing locale.
+  * Do a `forceUpdate` after changing locale.
   * Mark the connecting compoent `{pure: false}`.
   * Pass `locale` in `props`.
+  * Set `key` when dispatching `updateIntl`.
+  * Provide custom `intlSelector` for `IntlProvider`.
