@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { FormattedMessage, injectIntl } from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 const Greeting = () => (
   <p>
@@ -8,4 +8,4 @@ const Greeting = () => (
   </p>
 )
 
-export default injectIntl(connect()(Greeting))
+export default connect()(Greeting)
