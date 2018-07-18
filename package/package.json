@@ -55,37 +55,6 @@
     "i18n",
     "redux"
   ],
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": 4
-          }
-        }
-      ],
-      [
-        "@babel/preset-stage-1",
-        {
-          "decoratorsLegacy": true
-        }
-      ],
-      "@babel/preset-react"
-    ],
-    "env": {
-      "production": {
-        "plugins": [
-          [
-            "transform-react-remove-prop-types",
-            {
-              "mode": "wrap"
-            }
-          ]
-        ]
-      }
-    }
-  },
   "browserslist": [
     "last 2 versions",
     "Android > 2",
