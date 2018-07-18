@@ -1,5 +1,10 @@
 ## Next
 
+## v2.0.1
+
+- Use .babelrc, close [#50](https://github.com/ratson/react-intl-redux/issues/50)
+
+
 ## v2.0.0
 
 ##### Breaking Changes
