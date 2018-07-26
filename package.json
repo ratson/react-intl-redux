@@ -1,12 +1,25 @@
 {
-  "private": true,
+  "name": "react-intl-redux",
+  "version": "2.0.1",
+  "description": "Redux binding for React Intl",
+  "main": "lib",
+  "side-effects": false,
   "scripts": {
+    "build": "cross-env NODE_ENV=production babel src --out-dir lib",
+    "clean": "del lib coverage",
     "lint": "eslint --ignore-path .gitignore --ext js,md .",
-    "release": "lerna publish",
+    "prepublish": "run-s clean build",
     "test": "run-p test:* lint",
     "test:ava": "ava",
     "coverage": "nyc ava",
     "precommit": "lint-staged"
+  },
+  "peerDependencies": {
+    "react-intl": "^2.2.2",
+    "react-redux": "^5.0.1"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.54",
@@ -15,14 +28,14 @@
     "@babel/preset-react": "^7.0.0-beta.54",
     "@babel/preset-stage-1": "^7.0.0-beta.54",
     "@babel/register": "^7.0.0-beta.54",
-    "ava": "^1.0.0-beta.4",
+    "ava": "^0.25.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
     "cross-env": "^5.2.0",
     "del-cli": "^1.1.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "^5.1.0",
-    "eslint-config-concise": "^0.28.0",
+    "eslint": "^5.2.0",
+    "eslint-config-concise": "^0.29.2",
     "eslint-config-concise-ava": "^0.29.0",
     "eslint-config-concise-esnext": "^0.28.2",
     "eslint-config-concise-react": "^0.28.2",
@@ -45,6 +58,28 @@
     "redux": "^4.0.0",
     "redux-immutable": "^4.0.0"
   },
+  "repository": "ratson/react-intl-redux",
+  "license": "MIT",
+  "files": [
+    "*.md",
+    "LICENSE",
+    "lib",
+    "src"
+  ],
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-intl",
+    "react-redux",
+    "intl",
+    "i18n",
+    "redux"
+  ],
+  "browserslist": [
+    "last 2 versions",
+    "Android > 2",
+    "last 2 ChromeAndroid versions"
+  ],
   "ava": {
     "require": [
       "@babel/register",
@@ -52,37 +87,6 @@
       "jsdom-global/register",
       "./test/helpers/enzyme-config"
     ]
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": 4
-          }
-        }
-      ],
-      [
-        "@babel/preset-stage-1",
-        {
-          "decoratorsLegacy": true
-        }
-      ],
-      "@babel/preset-react"
-    ],
-    "env": {
-      "production": {
-        "plugins": [
-          [
-            "transform-react-remove-prop-types",
-            {
-              "mode": "wrap"
-            }
-          ]
-        ]
-      }
-    }
   },
   "eslintConfig": {
     "extends": [
@@ -107,15 +111,5 @@
       "lcov",
       "text"
     ]
-  },
-  "resolutions": {
-    "eslint": "^5.1.0",
-    "eslint-plugin-react": "^7.10.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3"
-  },
-  "workspaces": [
-    "package",
-    "examples/*"
-  ],
-  "name": "react-intl-redux"
+  }
 }

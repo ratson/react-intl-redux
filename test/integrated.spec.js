@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import { mount } from 'enzyme'
 import React from 'react'
 
-import { IntlProvider, intlReducer, updateIntl } from 'react-intl-redux'
+import { IntlProvider, intlReducer, updateIntl } from '..'
 
 test('change locale', t => {
   const reducer = combineReducers({

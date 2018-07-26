@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import { initialState, intlReducer, UPDATE } from 'react-intl-redux'
+import { initialState, intlReducer, UPDATE } from '..'
 
 test('initialState should default to en', t => {
   t.deepEqual(initialState, {
