@@ -39,13 +39,13 @@ class App extends React.Component {
         <IntlProvider>
           <div>
             <Greeting />
-              <p>
-                <button type="button" onClick={this.handleLoadlLocales}>
+            <p>
+              <button type="button" onClick={this.handleLoadlLocales}>
                 Local locales
-                </button>{' '}
-                  <SwitchLocale />
-              </p>
-                <DevTools />
+              </button>{' '}
+              <SwitchLocale />
+            </p>
+            <DevTools />
           </div>
         </IntlProvider>
       </Provider>
