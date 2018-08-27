@@ -125,6 +125,10 @@ store.dispatch(updateIntl({
 
 See the usage in [test](https://github.com/ratson/react-intl-redux/blob/master/test/immutable.spec.js).
 
+### TypeScript Support
+
+This module does not ship with types definitions by itself, but there is community contributed [`@types/react-intl-redux`](https://www.npmjs.com/package/@types/react-intl-redux) package.
+
 ## Examples
 
 There are some examples under the [`examples`](./examples) folder for reference.
