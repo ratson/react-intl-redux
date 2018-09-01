@@ -8,13 +8,10 @@
         }
       }
     ],
-    [
-      "@babel/preset-stage-1",
-      {
-        "decoratorsLegacy": true
-      }
-    ],
     "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-export-default-from"
   ],
   "env": {
     "production": {
