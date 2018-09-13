@@ -11,6 +11,7 @@
     "@babel/preset-react"
   ],
   "plugins": [
+    "@babel/plugin-transform-shorthand-properties",
     "@babel/plugin-proposal-export-default-from"
   ],
   "env": {

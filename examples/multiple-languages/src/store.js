@@ -13,7 +13,7 @@ function localesReducer(state = {}, action) {
     case UPDATE_LOCALES:
       return {
         ...state,
-        ...action.payload
+        ...action.payload,
       }
     default:
       return state
@@ -22,7 +22,7 @@ function localesReducer(state = {}, action) {
 
 const reducer = combineReducers({
   intl: intlReducer,
-  locales: localesReducer
+  locales: localesReducer,
 })
 
 export const DevTools = createDevTools(

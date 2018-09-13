@@ -6,7 +6,7 @@ import store from '../store'
 
 const SwitchLocale = connect(state => ({
   currentLocale: state.intl.locale,
-  locales: state.locales
+  locales: state.locales,
 }))(({ currentLocale, locales }) => (
   <select
     value={currentLocale}
@@ -14,12 +14,14 @@ const SwitchLocale = connect(state => ({
       store.dispatch(
         updateIntl({
           locale: e.target.value,
-          messages: locales[e.target.value]
+          messages: locales[e.target.value],
         })
       )
     }
   >
-    {Object.keys(locales).map(locale => <option key={locale}>{locale}</option>)}
+    {Object.keys(locales).map(locale => (
+      <option key={locale}>{locale}</option>
+    ))}
   </select>
 ))
 

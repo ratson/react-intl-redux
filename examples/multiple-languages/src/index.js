@@ -21,15 +21,15 @@ class App extends React.Component {
       type: UPDATE_LOCALES,
       payload: {
         en: {
-          'app.greeting': 'Hello!'
+          'app.greeting': 'Hello!',
         },
         it: {
-          'app.greeting': 'Ciao!'
+          'app.greeting': 'Ciao!',
         },
         zh: {
-          'app.greeting': '你好!'
-        }
-      }
+          'app.greeting': '你好!',
+        },
+      },
     })
   }
 
