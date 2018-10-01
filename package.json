@@ -11,8 +11,7 @@
     "prepublish": "run-s clean build",
     "test": "run-p test:* lint",
     "test:ava": "ava",
-    "coverage": "nyc ava",
-    "precommit": "lint-staged"
+    "coverage": "nyc ava"
   },
   "peerDependencies": {
     "react-intl": "^2.2.2",
@@ -43,7 +42,7 @@
     "eslint-config-concise-esnext": "^0.30.1",
     "eslint-config-concise-react": "^0.30.1",
     "eslint-plugin-react": "^7.11.1",
-    "husky": "^0.14.3",
+    "husky": "^1.0.1",
     "immutable": "^3.8.2",
     "intl": "^1.2.5",
     "jsdom": "^12.0.0",
@@ -100,6 +99,11 @@
     ],
     "rules": {
       "comma-dangle": "off"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
