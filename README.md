@@ -146,3 +146,7 @@ There are some examples under the [`examples`](./examples) folder for reference.
   * Pass `locale` in `props`.
   * Set `key` when dispatching `updateIntl`.
   * Provide custom `intlSelector` for `IntlProvider`.
+
+2. How to use `intl` in asynchronous action?
+
+  A simple solution would be retrive `intl` object using [`injectIntl`](https://github.com/yahoo/react-intl/wiki/API#injection-api) and pass it in the action payload.
