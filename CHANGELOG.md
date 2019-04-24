@@ -1,5 +1,9 @@
 ## Next
 
+## v2.0.3
+
+- Include `react-redux@^7.0.0"` in `peerDependencies`
+
 ## v2.0.2
 
 - Rebuild lib
