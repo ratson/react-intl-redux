@@ -1,8 +1,12 @@
 ## Next
 
-## v2.0.3
+## v2.1.1
 
 - Include `react-redux@^7.0.0"` in `peerDependencies`
+
+## v2.1.0
+
+- Include `react-redux@^6.0.0"` in `peerDependencies`
 
 ## v2.0.2
 
