@@ -18,5 +18,5 @@ test('Provider should render default en locale', t => {
     </Provider>
   )
   const app = shallow(<App />)
-  t.is(app.html(), '<span>1,000</span>')
+  t.is(app.html(), '1,000')
 })
