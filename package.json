@@ -14,7 +14,7 @@
     "coverage": "nyc ava"
   },
   "peerDependencies": {
-    "react-intl": "^2.2.2",
+    "react-intl": "^2.2.2 || ^3.0.0",
     "react-redux": "^5.0.1 || ^6.0.0 || ^7.0.0"
   },
   "dependencies": {
@@ -54,7 +54,7 @@
     "raf": "^3.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-intl": "^2.8.0",
+    "react-intl": "^3.0.0",
     "react-redux": "^7.0.2",
     "react-test-renderer": "^16.8.6",
     "redux": "^4.0.1",
@@ -99,6 +99,11 @@
     ],
     "rules": {
       "comma-dangle": "off"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
     }
   },
   "husky": {

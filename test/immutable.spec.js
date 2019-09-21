@@ -24,7 +24,7 @@ test('IntlProvider should render default en locale', t => {
   const intlSelector = state => state.get('intl').toJS()
   const App = () => (
     <Provider store={store}>
-      <IntlProvider intlSelector={intlSelector}>
+      <IntlProvider intlSelector={intlSelector} textComponent="span">
         <FormattedNumber value={1000} />
       </IntlProvider>
     </Provider>

@@ -15,7 +15,7 @@ test('IntlProvider should render default en locale', t => {
   const store = createStore(reducer)
   const App = () => (
     <Provider store={store}>
-      <IntlProvider>
+      <IntlProvider textComponent="span">
         <FormattedNumber value={1000} />
       </IntlProvider>
     </Provider>
