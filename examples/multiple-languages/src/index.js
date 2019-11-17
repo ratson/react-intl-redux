@@ -1,17 +1,12 @@
 /* eslint-env browser */
-import { addLocaleData } from 'react-intl'
 import { IntlProvider } from 'react-intl-redux'
 import { Provider } from 'react-redux'
-import itLocaleData from 'react-intl/locale-data/it'
-import zhLocaleData from 'react-intl/locale-data/zh'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
 import Greeting from './components/Greeting'
 import SwitchLocale from './components/SwitchLocale'
 import store, { DevTools } from './store'
-
-addLocaleData([...itLocaleData, ...zhLocaleData])
 
 const UPDATE_LOCALES = 'UPDATE_LOCALES'
 
