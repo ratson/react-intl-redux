@@ -1,20 +1,20 @@
-import test from 'ava'
-
 import { UPDATE, updateIntl } from '..'
 
-test('updateIntl should create action', t => {
+test('updateIntl should create action', () => {
   const locale = 'it'
   const messages = {}
-  t.deepEqual(updateIntl({ locale, messages }), {
+
+  expect(updateIntl({ locale, messages })).toEqual({
     type: UPDATE,
     payload: { locale, messages, formats: undefined }
   })
 })
 
-test('updateIntl should include formats', t => {
+test('updateIntl should include formats', () => {
   const locale = 'it'
   const formats = {}
-  t.deepEqual(updateIntl({ locale, formats }), {
+
+  expect(updateIntl({ locale, formats })).toEqual({
     type: UPDATE,
     payload: { locale, formats, messages: undefined }
   })
