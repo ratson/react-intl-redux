@@ -1,11 +1,11 @@
 import Enzyme, { shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
 import React from 'react'
 import { FormattedNumber } from 'react-intl'
 import { combineReducers, createStore } from 'redux'
-import { intlReducer, Provider } from '../..'
+import { intlReducer, Provider } from '../../src/'
 
-Enzyme.configure({ adapter: new Adapter() })
+Enzyme.configure({ adapter: new Adapter() });
 
 test('Provider should render default en locale', () => {
   const reducer = combineReducers({

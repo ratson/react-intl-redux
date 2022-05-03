@@ -1,4 +1,4 @@
-import { initialState, intlReducer, UPDATE } from '..'
+import { initialState, intlReducer, UPDATE } from '../src/'
 
 test('initialState should default to en', () => {
   expect(initialState).toEqual({
