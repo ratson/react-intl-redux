@@ -1,10 +1,10 @@
 import Enzyme, { shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
 import React from 'react'
 import { FormattedNumber } from 'react-intl'
 import { Provider } from 'react-redux'
 import { combineReducers, createStore } from 'redux'
-import { IntlProvider, intlReducer } from '../..'
+import { IntlProvider, intlReducer } from '../../src/'
 
 Enzyme.configure({ adapter: new Adapter() })
 

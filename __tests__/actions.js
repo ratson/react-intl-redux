@@ -1,4 +1,4 @@
-import { UPDATE, updateIntl } from '..'
+import { UPDATE, updateIntl } from '../src/'
 
 test('updateIntl should create action', () => {
   const locale = 'it'

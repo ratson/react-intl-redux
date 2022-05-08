@@ -1,5 +1,10 @@
 ## Next
 
+## v2.3.0
+
+- Added support for `react-intl@^4.0.0` and `react-intl@^5.0.0`
+- Updated `peerDependencies`
+
 ## v2.1.1
 
 - Include `react-redux@^7.0.0"` in `peerDependencies`
