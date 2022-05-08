@@ -1,6 +1,6 @@
 {
   "name": "react-intl-redux",
-  "version": "2.3.0",
+  "version": "2.2.0",
   "description": "Redux binding for React Intl",
   "main": "lib",
   "side-effects": false,
@@ -9,8 +9,7 @@
     "clean": "del lib coverage",
     "lint": "eslint --ignore-path .gitignore --ext js,md .",
     "prepublish": "run-s clean build",
-    "test": "run-p test:* lint",
-    "test:ava": "jest"
+    "test": "jest"
   },
   "peerDependencies": {
     "@babel/runtime": "^7.17.9",
