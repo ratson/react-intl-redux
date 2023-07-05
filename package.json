@@ -1,6 +1,6 @@
 {
   "name": "react-intl-redux",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Redux binding for React Intl",
   "main": "lib",
   "side-effects": false,
