@@ -1,5 +1,5 @@
-export IntlProvider from './components/IntlProvider'
-export Provider from './components/Provider'
+export { default as IntlProvider } from './components/IntlProvider';
+export { default as Provider } from './components/Provider';
 
 export const UPDATE = '@@intl/UPDATE'
 
