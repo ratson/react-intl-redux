@@ -1,5 +1,4 @@
 import { Provider as ReduxProvider } from 'react-redux'
-import React from 'react'
 import PropTypes from 'prop-types'
 
 import IntlProvider from './IntlProvider'
@@ -12,6 +11,7 @@ const Provider = ({ store, children }) =>
   </ReduxProvider>
 
 Provider.propTypes = {
+  store: PropTypes.object.isRequired,
   children: PropTypes.element.isRequired,
 }
 

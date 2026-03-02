@@ -1,33 +1,30 @@
-import Enzyme, { mount } from 'enzyme'
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
-import React from 'react'
+import { render, act } from '@testing-library/react'
 import { FormattedNumber } from 'react-intl'
 import { Provider } from 'react-redux'
-import { combineReducers, createStore } from 'redux'
+import { configureStore } from '@reduxjs/toolkit'
 import { IntlProvider, intlReducer, updateIntl } from '../src/'
 
-Enzyme.configure({ adapter: new Adapter() })
-
 test('change locale', () => {
-  const reducer = combineReducers({
-    intl: intlReducer
-  })
-  const store = createStore(reducer)
+  const store = configureStore({ reducer: { intl: intlReducer } })
   const App = () => (
     <Provider store={store}>
-      <IntlProvider textComponent="span">
+      <IntlProvider>
         <FormattedNumber value={1000.95} />
       </IntlProvider>
     </Provider>
   )
-  const app = mount(<App />)
+  const { container } = render(<App />)
 
-  expect(app.html()).toBe('<span>1,000.95</span>')
+  expect(container.textContent).toBe('1,000.95')
   expect(store.getState().intl.locale).toBe('en')
 
-  store.dispatch(updateIntl({ locale: 'fr-FR' }))
-  // expect(app.html()).toBe('<span>1&nbsp;000,95</span>')
+  act(() => {
+    store.dispatch(updateIntl({ locale: 'fr-FR' }))
+  })
+  // expect(container.textContent).toBe('1\u202f000,95') // locale output varies by environment
 
-  store.dispatch(updateIntl({ locale: 'en-GB' }))
-  expect(app.html()).toBe('<span>1,000.95</span>')
+  act(() => {
+    store.dispatch(updateIntl({ locale: 'en-GB' }))
+  })
+  expect(container.textContent).toBe('1,000.95')
 })

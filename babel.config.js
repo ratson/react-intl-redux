@@ -8,7 +8,7 @@ module.exports = {
         }
       }
     ],
-    '@babel/preset-react'
+    ['@babel/preset-react', { runtime: 'automatic' }]
   ],
   plugins: [
     '@babel/transform-runtime',

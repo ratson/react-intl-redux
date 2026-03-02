@@ -1,17 +1,22 @@
-import Enzyme, { shallow } from 'enzyme'
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
+import { render } from '@testing-library/react'
 import Immutable from 'immutable'
-import React from 'react'
 import { FormattedNumber } from 'react-intl'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import { combineReducers } from 'redux-immutable'
+import { configureStore } from '@reduxjs/toolkit'
 import { IntlProvider, intlReducer } from '../src/'
 
-Enzyme.configure({ adapter: new Adapter() })
+function combineImmutableReducers(reducers) {
+  return function (state = Immutable.Map(), action) {
+    return state.withMutations(mutableState => {
+      Object.keys(reducers).forEach(key => {
+        mutableState.set(key, reducers[key](state.get(key), action))
+      })
+    })
+  }
+}
 
 test('IntlProvider should render default en locale', () => {
-  const reducer = combineReducers({
+  const reducer = combineImmutableReducers({
     intl: intlReducer
   })
   const initialState = Immutable.fromJS({
@@ -20,17 +25,19 @@ test('IntlProvider should render default en locale', () => {
       messages: {}
     }
   })
-  const store = createStore(reducer, initialState)
-  // eslint-disable-next-line unicorn/consistent-function-scoping
+  const store = configureStore({
+    reducer,
+    preloadedState: initialState,
+    middleware: getDefaultMiddleware => getDefaultMiddleware({ serializableCheck: false }),
+  })
   const intlSelector = state => state.get('intl').toJS()
-  const App = () => (
+  const { container } = render(
     <Provider store={store}>
-      <IntlProvider intlSelector={intlSelector} textComponent="span">
+      <IntlProvider intlSelector={intlSelector}>
         <FormattedNumber value={1000} />
       </IntlProvider>
     </Provider>
   )
-  const app = shallow(<App />)
 
-  expect(app.html()).toBe('<span>1,000</span>')
+  expect(container.textContent).toBe('1,000')
 })

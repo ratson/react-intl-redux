@@ -1,12 +1,7 @@
-import { createStore, combineReducers } from 'redux'
+import { configureStore } from '@reduxjs/toolkit'
 import { intlReducer } from 'react-intl-redux'
-import React from 'react'
 
-import { createDevTools } from 'redux-devtools'
-import DockMonitor from 'redux-devtools-dock-monitor'
-import LogMonitor from 'redux-devtools-log-monitor'
-
-const UPDATE_LOCALES = 'UPDATE_LOCALES'
+export const UPDATE_LOCALES = 'UPDATE_LOCALES'
 
 function localesReducer(state = {}, action) {
   switch (action.type) {
@@ -20,21 +15,14 @@ function localesReducer(state = {}, action) {
   }
 }
 
-const reducer = combineReducers({
-  intl: intlReducer,
-  locales: localesReducer,
+// Redux DevTools Extension is automatically enabled by configureStore.
+// Install the browser extension to inspect state:
+// https://github.com/reduxjs/redux-devtools/tree/main/extension
+const store = configureStore({
+  reducer: {
+    intl: intlReducer,
+    locales: localesReducer,
+  },
 })
-
-export const DevTools = createDevTools(
-  <DockMonitor
-    toggleVisibilityKey="ctrl-h"
-    changePositionKey="ctrl-q"
-    changeMonitorKey="ctrl-m"
-  >
-    <LogMonitor />
-  </DockMonitor>
-)
-
-const store = createStore(reducer, {}, DevTools.instrument())
 
 export default store
