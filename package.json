@@ -110,5 +110,10 @@
   },
   "allowScripts": {
     "@parcel/watcher": false
+  },
+  "overrides": {
+    "babel-preset-current-node-syntax": {
+      "@babel/core": "$@babel/core"
+    }
   }
 }
