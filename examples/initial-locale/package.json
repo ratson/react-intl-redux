@@ -3,7 +3,6 @@
   "name": "initial-locale-example",
   "version": "3.0.1",
   "scripts": {
-    "prepare": "del node_modules/@nate-summercook/react-intl-redux/node_modules",
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview"
@@ -18,7 +17,11 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.3.0",
-    "del-cli": "^8.0.1",
     "vite": "^8.3.8"
+  },
+  "allowScripts": {
+    "file:../../../..": false,
+    "@parcel/watcher": false,
+    "fsevents": false
   }
 }
