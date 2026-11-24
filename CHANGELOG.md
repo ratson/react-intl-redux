@@ -1,3 +1,10 @@
+## v3.2.0
+
+- Added support for `react-intl@^11.0.0` and `react-intl@^12.0.0`
+- Updated `devDependencies` (`react-intl` v12, `jsdom` v31, `del-cli` v8)
+- Updated the examples to `react-intl@^12.0.0` and `del-cli` v8
+- Kept `typescript` on v6, as `typescript-eslint` still does not support v7
+
 ## v3.1.1
 
 - Updated `devDependencies`
