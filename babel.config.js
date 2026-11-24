@@ -3,10 +3,12 @@ module.exports = (api) => {
 
   return {
     presets: [
-      ['@babel/preset-env', isEsm ? { targets: { esmodules: true }, modules: false } : { targets: { node: 18 } }],
+      [
+        '@babel/preset-env',
+        isEsm ? { targets: { esmodules: true }, modules: false } : { targets: { node: 18 }, modules: 'commonjs' },
+      ],
       '@babel/preset-typescript',
       ['@babel/preset-react', { runtime: 'automatic' }],
     ],
-    plugins: ['@babel/plugin-transform-shorthand-properties', '@babel/plugin-proposal-export-default-from'],
   };
 };
