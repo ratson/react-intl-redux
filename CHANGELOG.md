@@ -10,6 +10,7 @@
 - Updated the examples to `react-intl@^12.0.0` and removed their unused `husky` dependency
 - Removed the examples' `prepare` script, which deleted the root `node_modules` through the `file:../..` symlink; Vite's `dedupe` already covers it
 - Denied dependency install scripts via `allowScripts`
+- Added an `overrides` entry pointing jest's `babel-preset-current-node-syntax` at Babel 8, silencing `ERESOLVE` peer warnings
 - Added `mise.toml` pinning Node and npm
 - Kept `typescript` on v6, as `typescript-eslint` still does not support v7
 
