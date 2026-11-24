@@ -1,8 +1,11 @@
 ## v3.2.0
 
 - Added support for `react-intl@^11.0.0` and `react-intl@^12.0.0`
-- Updated `devDependencies` (`react-intl` v12, `jsdom` v31, `del-cli` v8)
-- Updated the examples to `react-intl@^12.0.0`
+- Fixed the CommonJS build (`lib`), which has shipped ES module syntax since v3.1.0
+- Fixed `prepublish` not running on `npm publish` by renaming it to `prepublishOnly`
+- Updated `devDependencies` (`react-intl` v12, `del-cli` v8)
+- Removed unused `devDependencies`: `@babel/register`, `jsdom`, `@babel/plugin-proposal-export-default-from`, `@babel/plugin-transform-shorthand-properties`, `cross-env` and `npm-run-all`
+- Updated the examples to `react-intl@^12.0.0` and removed their unused `husky` dependency
 - Removed the examples' `prepare` script, which deleted the root `node_modules` through the `file:../..` symlink; Vite's `dedupe` already covers it
 - Denied dependency install scripts via `allowScripts`
 - Added `mise.toml` pinning Node and npm
