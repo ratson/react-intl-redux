@@ -2,6 +2,8 @@
 
 - Added support for `react-intl@^11.0.0` and `react-intl@^12.0.0`
 - Fixed the CommonJS build (`lib`), which has shipped ES module syntax since v3.1.0
+- Fixed native Node ESM imports of the `esm` build: import paths now carry `.js` extensions and `esm/` is marked as `"type": "module"`
+- Fixed the `sideEffects` field name so bundlers can tree-shake the package
 - Fixed `prepublish` not running on `npm publish` by renaming it to `prepublishOnly`
 - Updated `devDependencies` (`react-intl` v12, `del-cli` v8)
 - Removed unused `devDependencies`: `@babel/register`, `jsdom`, `@babel/plugin-proposal-export-default-from`, `@babel/plugin-transform-shorthand-properties`, `cross-env` and `npm-run-all`
