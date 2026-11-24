@@ -2,7 +2,10 @@
 
 - Added support for `react-intl@^11.0.0` and `react-intl@^12.0.0`
 - Updated `devDependencies` (`react-intl` v12, `jsdom` v31, `del-cli` v8)
-- Updated the examples to `react-intl@^12.0.0` and `del-cli` v8
+- Updated the examples to `react-intl@^12.0.0`
+- Removed the examples' `prepare` script, which deleted the root `node_modules` through the `file:../..` symlink; Vite's `dedupe` already covers it
+- Denied dependency install scripts via `allowScripts`
+- Added `mise.toml` pinning Node and npm
 - Kept `typescript` on v6, as `typescript-eslint` still does not support v7
 
 ## v3.1.1
