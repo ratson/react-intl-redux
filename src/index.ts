@@ -1,8 +1,8 @@
-import type { IntlState } from './types';
+import type { IntlState } from './types.ts';
 
-export { default as IntlProvider } from './components/IntlProvider';
-export { default as Provider } from './components/Provider';
-export type { IntlState } from './types';
+export { default as IntlProvider } from './components/IntlProvider.tsx';
+export { default as Provider } from './components/Provider.tsx';
+export type { IntlState } from './types.ts';
 
 export const UPDATE = '@@intl/UPDATE' as const;
 

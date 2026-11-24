@@ -13,10 +13,10 @@
       "default": "./lib/index.js"
     }
   },
-  "side-effects": false,
+  "sideEffects": false,
   "scripts": {
     "build:cjs": "babel src --out-dir lib --extensions .ts,.tsx",
-    "build:esm": "babel src --env-name esm --out-dir esm --extensions .ts,.tsx",
+    "build:esm": "babel src --env-name esm --out-dir esm --extensions .ts,.tsx && node -e \"require('fs').writeFileSync('esm/package.json', JSON.stringify({ type: 'module' }))\"",
     "build:types": "tsc",
     "build": "npm run build:cjs && npm run build:esm && npm run build:types",
     "clean": "del lib esm types coverage",

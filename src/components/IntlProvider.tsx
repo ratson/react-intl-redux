@@ -1,7 +1,7 @@
 import { useSelector, shallowEqual } from 'react-redux';
 import { IntlProvider } from 'react-intl';
 import type { ReactNode } from 'react';
-import type { IntlState } from '../types';
+import type { IntlState } from '../types.ts';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type SelectorFunction = (state: any) => IntlState;
