@@ -113,5 +113,8 @@
     "*.{js,jsx,mjs,ts,tsx}": [
       "eslint --fix"
     ]
+  },
+  "allowScripts": {
+    "@parcel/watcher": false
   }
 }
